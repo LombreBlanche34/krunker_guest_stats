@@ -45,7 +45,7 @@
     // Wait 3 seconds to ensure #signedOutHeaderBar is loaded
     setTimeout(() => {
       const target = document.querySelector("#signedOutHeaderBar");
-      if (!target) return alert("#signedOutHeaderBar not found.");
+      if (!target) return console.error("#signedOutHeaderBar not found.");
 
       const btn = document.createElement("div");
       btn.className = "button buttonB bigShadowT";
@@ -80,7 +80,7 @@
 
           const json = await response.json();
           const stats = json?.data?.profile;
-          if (!stats) return alert("Invalid data.");
+          if (!stats) return console.error("Invalid data.");
 
           showPopup(stats);
         } catch (err) {
