@@ -65,7 +65,7 @@
 
       btn.addEventListener("click", async () => {
         if (!savedAuthToken) {
-          return alert("Token not yet captured. Please reload or wait for a request to be sent.");
+          return console.error("Token not yet captured. Please reload or wait for a request to be sent.");
         }
 
         try {
@@ -75,7 +75,7 @@
           });
 
           if (!response.ok) {
-            return alert("HTTP error: " + response.status);
+            return console.error("HTTP error: " + response.status);
           }
 
           const json = await response.json();
@@ -84,7 +84,7 @@
 
           showPopup(stats);
         } catch (err) {
-          alert("Error: " + err.message);
+          console.error("Error: " + err.message);
         }
       });
 
