@@ -22,5 +22,6 @@ This script captures the Authorization token from Krunker.io guest profile reque
 - No data is sent outside or stored permanently.
 
 ---
+![Guest Stats Popup](https://i.imgur.com/kdRLND1.png)
 
 Feel free to customize the script for your needs.
